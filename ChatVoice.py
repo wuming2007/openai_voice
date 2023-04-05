@@ -2,7 +2,7 @@ import speech_recognition as sr
 import pyttsx3,time,openai,time
 
 # Initialize OpenAI API
-openai.api_key = k.api_key
+openai.api_key = "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"
 # Initialize the text to speech engine 
 engine=pyttsx3.init()
 voiceid = 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_EN-US_ZIRA_11.0'
@@ -35,13 +35,13 @@ def speak_text(text):
 def main():
     while True:
         #Waith for user say "genius"
-        print("Say 'Genius' to start recording your question")
+        print("Say 'Javis' to start recording your question")
         with sr.Microphone() as source:
             recognizer=sr.Recognizer()
             audio=recognizer.listen(source)
             try:
                 transcription = recognizer.recognize_google(audio)
-                if transcription.lower()=="genius":
+                if transcription.lower()=="javis":
                     #record audio
                     filename ="input.wav"
                     print("Say your question")
