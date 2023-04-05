@@ -3,7 +3,7 @@ import pyttsx3
 import speech_recognition as sr
 
 #set OpenAI API Key
-openai.api_key = "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"
+openai.api_key = "Put API Key Here"
 model_id = "gpt-3.5-turbo"
 
 print("gpt version:", openai.api_version)
